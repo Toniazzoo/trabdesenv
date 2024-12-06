@@ -14,6 +14,17 @@
                 @endforeach
             </select>
         </div>
+
+        <div class="form-group">
+            <label for="quarto">Quarto</label>
+            <select name="quarto" id="quarto" class="form-control" required>
+                <option value="">Selecione um Quarto</option>
+                @foreach($quarto as $quarto)
+                    <option value="{{ $quarto->id }}">{{ $quarto->nome }}</option>
+                @endforeach
+            </select>
+        </div>
+
         <div class="form-group">
             <label for="data_inicio">Data de Início</label>
             <input type="date" name="data_inicio" id="data_inicio" class="form-control" required>

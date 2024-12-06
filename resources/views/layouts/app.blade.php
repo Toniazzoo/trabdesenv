@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Management</title>
+    <title>Hotel Mirante</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
     <div class="container">
         <!-- Menu de navegação -->
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #778b78;">
-            <a class="navbar-brand text-white" href="#">Hotel Management</a>
+            <a class="navbar-brand text-white" href="#">Hotel Mirante</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -27,6 +27,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{ route('hospedagens.index') }}">Hospedagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('quartos.index') }}">Quartos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Sair</a>

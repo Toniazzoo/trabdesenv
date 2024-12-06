@@ -28,7 +28,10 @@
                 <a href="{{ route('hospedes.index') }}" class="btn btn-success btn-lg w-100 mb-3" style="background-color: #778b78;">Gerenciar Hóspedes</a>
             </div>
             <div class="col-md-4">
-                <a href="{{ route('hospedagens.index') }}" class="btn btn-primary btn-lg w-100 mb-3" style="background-color: #a3aca4;">Gerenciar Hospedagens</a>
+                <a href="{{ route('hospedagens.index') }}" class="btn btn-primary btn-lg w-100 mb-3" style="background-color: #778b78;">Gerenciar Hospedagens</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ route('quartos.index') }}" class="btn btn-success btn-lg w-100 mb-3" style="background-color: #778b78;">Gerenciar Quartos</a>
             </div>
         </div>
     </div>
