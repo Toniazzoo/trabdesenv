@@ -27,6 +27,6 @@
             <textarea name="description" id="description" class="form-control">{{ old('description') }}</textarea>
         </div>
 
-        <button type="submit" class="btn btn-success">Save</button>
+        <button type="submit" class="btn btn-success">Salvar</button>
     </form>
 @endsection

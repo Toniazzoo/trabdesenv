@@ -1,11 +1,20 @@
-<form action="{{ route('hospedagens.update', $hospedagem->id) }}" method="POST">
+@extends('layouts.app')
+
+
+@section('content')
+
+<div class="container">
+    <h1>Editar Hospedagem</h1>
+    <form action="{{ route('hospedagem.update', $hospedagem->id) }}" method="POST">
     @csrf
     @method('PUT')
+
+    <input type="hidden" name="id" value="{{ $hospedagem->id }}">
 
     <div class="form-group">
         <label for="hospede_id">Hóspede</label>
         <select name="hospede_id" id="hospede_id" class="form-control" required>
-            @foreach($hospedes as $hospede)
+            @foreach ($hospedes as $hospede)
                 <option value="{{ $hospede->id }}" {{ $hospedagem->hospede_id == $hospede->id ? 'selected' : '' }}>
                     {{ $hospede->nome }}
                 </option>
@@ -15,12 +24,14 @@
 
     <div class="form-group">
         <label for="data_inicio">Data Início</label>
-        <input type="date" name="data_inicio" id="data_inicio" class="form-control" value="{{ $hospedagem->data_inicio }}" required>
+        <input type="date" name="data_inicio" id="data_inicio" class="form-control"
+            value="{{ $hospedagem->data_inicio }}" required>
     </div>
 
     <div class="form-group">
         <label for="data_fim">Data Fim</label>
-        <input type="date" name="data_fim" id="data_fim" class="form-control" value="{{ $hospedagem->data_fim }}" required>
+        <input type="date" name="data_fim" id="data_fim" class="form-control" value="{{ $hospedagem->data_fim }}"
+            required>
     </div>
 
     <button type="submit" class="btn btn-primary">Atualizar Hospedagem</button>

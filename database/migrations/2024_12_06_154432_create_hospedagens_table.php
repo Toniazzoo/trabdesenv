@@ -11,7 +11,8 @@ class CreateHospedagensTable extends Migration
     {
         Schema::create('hospedagens', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('hospede_id')->constrained()->onDelete('cascade');  // Relacionamento com a tabela hospedes
+            $table->foreignId('hospede_id')->constrained('hospedes')->onDelete('cascade');  // Relacionamento com a tabela hospedes
+            $table->foreignId('quarto_id')->constrained('quartos')->onDelete('cascade');  // Relacionamento com a tabela hospedes
             $table->date('data_inicio');
             $table->date('data_fim');
             $table->timestamps();

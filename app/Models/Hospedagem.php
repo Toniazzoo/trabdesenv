@@ -15,6 +15,7 @@ class Hospedagem extends Model
 
     protected $fillable = [
         'hospede_id',
+        'quarto_id',
         'data_inicio',
         'data_fim',
     ];
@@ -22,7 +23,12 @@ class Hospedagem extends Model
     // Definindo o relacionamento 'hospede' - uma hospedagem pertence a um hospede
     public function hospede()
     {
-        return $this->belongsTo(Hospede::class);
+        return $this->belongsTo(Hospede::class, 'hospede_id');
+    }
+
+    public function quarto()
+    {
+        return $this->belongsTo(Quarto::class, 'quarto_id');
     }
 
 }

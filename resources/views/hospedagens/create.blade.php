@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>Cadastrar Hospedagem</h1>
-    <form action="{{ route('hospedagens.store') }}" method="POST">
+    <form action="{{ route('hospedagem.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="hospede_id">Hóspede</label>
@@ -17,14 +17,13 @@
 
         <div class="form-group">
             <label for="quarto">Quarto</label>
-            <select name="quarto" id="quarto" class="form-control" required>
+            <select name="quarto_id" id="quarto" class="form-control" required>
                 <option value="">Selecione um Quarto</option>
-                @foreach($quarto as $quarto)
-                    <option value="{{ $quarto->id }}">{{ $quarto->nome }}</option>
+                @foreach($quartos as $quarto)
+                    <option value="{{ $quarto->id }}">{{ $quarto->number." - ".$quarto->type }}</option>
                 @endforeach
             </select>
         </div>
-
         <div class="form-group">
             <label for="data_inicio">Data de Início</label>
             <input type="date" name="data_inicio" id="data_inicio" class="form-control" required>

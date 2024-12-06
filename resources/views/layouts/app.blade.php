@@ -26,13 +26,13 @@
                         <a class="nav-link text-white" href="{{ route('hospedes.index') }}">Hóspedes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('hospedagens.index') }}">Hospedagens</a>
+                        <a class="nav-link text-white" href="{{ route('hospedagem.index') }}">Hospedagens</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{ route('quartos.index') }}">Quartos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Sair</a>
+                        <a class="nav-link text-white" href="">Sair</a>
                     </li>
                 </ul>
             </div>
